@@ -1,5 +1,5 @@
 .\objects\driver_gpio.o: ..\SharedDrivers\Source\Driver_GPIO.c
-.\objects\driver_gpio.o: .\Include\Driver_GPIO.h
+.\objects\driver_gpio.o: ..\SharedDrivers\Include\Driver_GPIO.h
 .\objects\driver_gpio.o: C:\Programdata\Keil\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h
 .\objects\driver_gpio.o: .\RTE\_Simulation\RTE_Components.h
 .\objects\driver_gpio.o: C:\Programdata\Keil\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h

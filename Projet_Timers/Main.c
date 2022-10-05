@@ -3,6 +3,35 @@
 #include "stm32f10x.h"
 #include "MyTimer.h"
 
+MyTimer_Struct_TypeDef MyTimer;
+
+int main (void) {
+	
+		
+	MyTimer.Timer = TIM2;
+
+	//TIM2->CR1 |= TIM_CR1_CEN; // enable counter
+	//TIM2->CR1 |= TIM_CR1_ARPE ; //buffers ARR
+	//TIM2->ARR |= (10200);
+	//TIM2->PSC |= (3500);
+	
+	MyTimer_Base_Init(&MyTimer);
+
+	
+	//Gestion des interruptions
+	//TIM2->DIER |= TIM_DIER_UIE; //enable le lancement des interruptions par le timer 2
+	
+	MyTimer_ActiveIT(MyTimer.Timer, 2);
+	
+	do {
+	
+	} while (1);
+	
+}
+
+
+/*
+
 void MyTimer_Base_Init( MyTimer_Struct_TypeDef * Timer ) {
 	Timer->Timer->ARR |= (18000-1);
 	Timer->Timer->PSC |= (2000-1);
@@ -62,6 +91,5 @@ void MyTimer_ActiveIT ( TIM_TypeDef * Timer , char Prio ){
 	}
 	
 }	
-
-
-
+	
+*/
